@@ -1,5 +1,5 @@
 class Path < ActiveRecord::Base
   attr_accessible :description, :title
   
-  has_many :lessons
+  has_many :lessons, :dependent => :destroy
 end

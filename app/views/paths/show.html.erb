@@ -1,3 +1,11 @@
 <h1><%= @path.title %></h1>
 <p><%= @path.description %></p>
 
+<% @lessons.each do |lesson| %>
+<div class="well">
+	  <h5><%= lesson.title %></h5><br>
+	  <%= lesson.description %><br>
+	  <%= link_to 'Start Learning!', '#' %>
+</div>
+<% end %>
+
