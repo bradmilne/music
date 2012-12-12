@@ -10,6 +10,8 @@ Music::Application.routes.draw do
   match '/about', to: "static_pages#about"
   resources :paths, :only => [:show]
   resources :lessons, :only => [:show]
+  
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
