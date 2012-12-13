@@ -1,0 +1,8 @@
+<h6>All Paths</h6>
+<% @paths.each do |path| %>
+<div class="well">
+	  <h5><%= path.title %></h5><br>
+	  <%= path.description %><br>
+	  <%= link_to 'Start Learning!', path_path(path) %>
+</div>
+<% end %>

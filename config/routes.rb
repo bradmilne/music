@@ -8,7 +8,7 @@ Music::Application.routes.draw do
 
   root to: 'static_pages#home'
   match '/about', to: "static_pages#about"
-  resources :paths, :only => [:show]
+  resources :paths, :only => [:index, :show]
   resources :lessons, :only => [:show]
   
 

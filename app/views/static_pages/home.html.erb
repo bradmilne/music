@@ -10,11 +10,4 @@
   <%= link_to "Sign up now!", '#', class: "btn btn-large btn-primary" %>
 </div>
 
-<h6>Paths</h6>
-<% @paths.each do |path| %>
-<div class="well">
-	  <h5><%= path.title %></h5><br>
-	  <%= path.description %><br>
-	  <%= link_to 'Start Learning!', path_path(path) %>
-</div>
-<% end %>
+<h3><%= link_to 'See All Learning Options!', paths_path %></h3>
