@@ -10,6 +10,9 @@ Music::Application.routes.draw do
   match '/about', to: "static_pages#about"
   resources :paths, :only => [:index, :show]
   resources :lessons, :only => [:show]
+  resources :lessons do
+    resources :quizzes, :only => [:show]
+  end
   
 
 
