@@ -4,6 +4,7 @@ ActiveAdmin.register Question do
       f.input :lesson_id, :as => :select, :collection => Lesson.all
       f.input :question
       f.input :audioclip
+      f.input :explanation
     end
    
    # BELOW CODE IS TO ADD IN ANSWERS TO QUESTIONS SO IT CAN BE DONE AT SAME TIME 

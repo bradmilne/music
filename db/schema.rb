@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121218195445) do
+ActiveRecord::Schema.define(:version => 20121218203556) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(:version => 20121218195445) do
     t.string   "audioclip_content_type"
     t.integer  "audioclip_file_size"
     t.datetime "audioclip_updated_at"
+    t.text     "explanation"
   end
 
   create_table "quizzes", :force => true do |t|
