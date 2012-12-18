@@ -8,18 +8,10 @@ ActiveAdmin.register Question do
     end
    
    # BELOW CODE IS TO ADD IN ANSWERS TO QUESTIONS SO IT CAN BE DONE AT SAME TIME 
-   # f.has_many :items do |app_f|
-    #  app_f.inputs "Item" do
-     #   if !app_f.object.nil?
-      #    app_f.input :_destroy, :as => :boolean, :label => "Destroy?"
-       # end
+    #f.inputs "Answer", :for => [:answer, f.object.answer || Answer.new] do
+      #answer.input :answer
+    #end
         
-      #  app_f.input :name
-       # app_f.input :description
-       # app_f.input :price
-      #  app_f.input :image
-    #  end
-    # end
     
     # SUBMIT BUTTON BELOW
     f.actions
