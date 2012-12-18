@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121218194336) do
+ActiveRecord::Schema.define(:version => 20121218195445) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -64,8 +64,12 @@ ActiveRecord::Schema.define(:version => 20121218194336) do
   create_table "questions", :force => true do |t|
     t.string   "question"
     t.integer  "lesson_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",             :null => false
+    t.datetime "updated_at",             :null => false
+    t.string   "audioclip_file_name"
+    t.string   "audioclip_content_type"
+    t.integer  "audioclip_file_size"
+    t.datetime "audioclip_updated_at"
   end
 
   create_table "quizzes", :force => true do |t|
