@@ -3,14 +3,12 @@ ActiveAdmin.register Question do
     f.inputs "Question", :multipart => true do
       f.input :lesson_id, :as => :select, :collection => Lesson.all
       f.input :question
+      f.input :answer
+      f.input :octave
       f.input :audioclip
       f.input :explanation
     end
-   
-   # BELOW CODE IS TO ADD IN ANSWERS TO QUESTIONS SO IT CAN BE DONE AT SAME TIME 
-    #f.inputs "Answer", :for => [:answer, f.object.answer || Answer.new] do
-      #answer.input :answer
-    #end
+
         
     
     # SUBMIT BUTTON BELOW
