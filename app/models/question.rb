@@ -3,8 +3,5 @@ class Question < ActiveRecord::Base
   
   belongs_to :lesson
   
-  has_one :answer
-  accepts_nested_attributes_for :answer
-  
   has_attached_file :audioclip
 end
