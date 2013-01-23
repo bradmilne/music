@@ -1,5 +1,5 @@
 class Question < ActiveRecord::Base
-  attr_accessible :lesson_id, :question, :explanation, :audioclip, :octave, :answer, :quiz_id
+  attr_accessible :lesson_id, :question, :explanation, :audioclip, :octave, :answer
   
  
   belongs_to :quiz
