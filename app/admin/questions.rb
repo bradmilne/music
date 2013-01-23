@@ -12,7 +12,7 @@ ActiveAdmin.register Question do
         
     
     # SUBMIT BUTTON BELOW
-    f.actions
+    f.buttons
   end
   
 end
