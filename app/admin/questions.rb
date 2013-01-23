@@ -7,7 +7,6 @@ ActiveAdmin.register Question do
       f.input :octave
       f.input :audioclip
       f.input :explanation
-      f.input :quiz_id
     end
 
         
