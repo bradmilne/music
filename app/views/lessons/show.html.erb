@@ -4,10 +4,13 @@
 <h3>Take Quiz?</h3>
 
 <br>
-<br>
-Questions
-<br>
 
+<h3>Questions For this Lesson</h3>
+<br>
+<%= @questions.each do |question| %>
+  <%= question.question %><br>
+  <%= question.answer %><br>
+<% end %>
 
 
 
