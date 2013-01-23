@@ -5,7 +5,12 @@
 
 <br>
 <br>
-<h3>Questions</h3>
+<h3>Questions For this Lesson</h3>
+<br>
+<%= @questions.each do |question| %>
+  <%= question.question %><br>
+  <%= question.answer %><br>
+<% end %>
 
 
 
