@@ -1,7 +1,8 @@
 <h1><%= @lesson.title %></h1>
 <p><%= @lesson.description %></p>
 
-<h3>Take Quiz?</h3>
+
+<%= link_to "Take Quiz?", new_lesson_quiz_path(@lesson) %>
 
 <br>
 

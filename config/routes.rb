@@ -11,7 +11,7 @@ Music::Application.routes.draw do
   resources :paths, :only => [:index, :show]
   resources :lessons, :only => [:show]
   resources :lessons do
-    resources :quizzes, :only => [:index, :show]
+    resources :quizzes, :only => [:index, :show, :new]
   end
   
 
