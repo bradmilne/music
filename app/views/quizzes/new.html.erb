@@ -13,7 +13,7 @@ LESSON TITLE: <%= @lesson.title %>
 
 <h3>THE QUIZ!!!</h3>
 
-<%= form_tag("/create", :method => "post") do %>
+<%= form_tag(lesson_quizzes_path, :method => "post") do %>
   <%= label_tag(:user_answer1, @question1.question) %>
   <%= hidden_field_tag :correct_answer1, :value => '#{@question1.answer} '%>
   <%= text_field_tag(:user_answer1) %> correct answer:  <%= @question1.answer %>

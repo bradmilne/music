@@ -12,6 +12,7 @@ class QuizzesController < ApplicationController
   end
   
   def create
+    render 'show' 
   end
   
 end
