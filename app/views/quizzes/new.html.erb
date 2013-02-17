@@ -18,6 +18,27 @@ LESSON TITLE: <%= @lesson.title %>
 <br>
 <h3>THE QUIZ!!!</h3>
 
+<%= form_tag("/create", :method => "post") do %>
+  <%= label_tag(:answer1, @question1.question) %>
+  <%= @question1.answer %>
+  <%= text_field_tag(:answer1) %>
+
+  <%= label_tag(:answer2, @question2.question) %>
+  <%= @question2.answer %>
+  <%= text_field_tag(:answer2) %>
+
+  <%= label_tag(:answer3, @question3.question) %>
+  <%= @question3.answer %>
+  <%= text_field_tag(:answer3) %>
+  <br>
+  <%= submit_tag("Submit Answers") %>
+<% end %>
+
+
+<br>
+
+
+<h3>Test on shuffle questions</h3>
 <br>
 q: <%= @question1.question %> a: <%= @question1.answer %> <br>
 q: <%= @question2.question %> a: <%= @question2.answer %><br>
