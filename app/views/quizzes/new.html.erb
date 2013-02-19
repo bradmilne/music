@@ -15,15 +15,15 @@ LESSON TITLE: <%= @lesson.title %>
 
 <%= form_tag(lesson_quizzes_path, :method => "post") do %>
   <%= label_tag(:user_answer1, @question1.question) %>
-  <%= hidden_field_tag :correct_answer1, :value => '#{@question1.answer} '%>
+  <%= hidden_field_tag(:correct_answer1, @question1.answer) %>
   <%= text_field_tag(:user_answer1) %> correct answer:  <%= @question1.answer %>
 
   <%= label_tag(:user_answer2, @question2.question) %>
-  <%= hidden_field_tag :correct_answer2, :value => '#{@question2.answer} '%>
+  <%= hidden_field_tag :correct_answer2, @question2.answer %>
   <%= text_field_tag(:user_answer2) %> correct answer:  <%= @question2.answer %>
 
   <%= label_tag(:user_answer3, @question3.question) %>
-  <%= hidden_field_tag :correct_answer3, :value => '#{@question2.answer} '%>
+  <%= hidden_field_tag :correct_answer3, @question3.answer %>
   <%= text_field_tag(:user_answer3) %> correct answer:  <%= @question2.answer %>
   <br>
   <%= submit_tag("Submit Answers") %>

@@ -8,11 +8,23 @@ class QuizzesController < ApplicationController
     @question3 = @questions.shuffle[1]
   end
   
-  def show
-  end
+  
   
   def create
-    render 'show' 
+    @score = 0
+    if params[:user_answer1] == params[:correct_answer1]
+      @score = @score + 1
+      flash[:notice] = "Yes you got it right!"
+      render 'show' 
+    else
+      flash[:notice] = "Sorry you got it wrong"
+      @score = @score
+      render 'show'
+    end
+  end
+  
+  def show
+    @score
   end
   
 end
