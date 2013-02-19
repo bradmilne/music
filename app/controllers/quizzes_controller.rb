@@ -14,7 +14,7 @@ class QuizzesController < ApplicationController
     @score = 0
     if params[:user_answer1] == params[:correct_answer1]
       @score = @score + 1
-      flash[:notice] = "Yes you got it right!"
+      flash[:notice] = "Yes, you got it right!"
       render 'show' 
     else
       flash[:notice] = "Sorry you got it wrong"
