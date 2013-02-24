@@ -11,20 +11,22 @@ LESSON TITLE: <%= @lesson.title %>
 
 <h3>Questions For this Lesson</h3>
 
-<h3>THE QUIZ!!!</h3>
 
 <%= form_tag(lesson_quizzes_path, :method => "post") do %>
   <%= label_tag(:user_answer1, @question1.question) %>
+  <audio src="<%= @question1.audioclip.url %>" preload="auto" controls></audio>
   <%= hidden_field_tag(:correct_answer1, @question1.answer) %>
   <%= hidden_field_tag(:octave1, @question1.octave) %>
   <%= text_field_tag(:user_answer1) %> correct answer:  <%= @question1.answer %>
 
   <%= label_tag(:user_answer2, @question2.question) %>
+  <audio src="<%= @question2.audioclip.url %>" preload="auto" controls></audio>
   <%= hidden_field_tag :correct_answer2, @question2.answer %>
   <%= hidden_field_tag(:octave2, @question2.octave) %>
   <%= text_field_tag(:user_answer2) %> correct answer:  <%= @question2.answer %>
 
   <%= label_tag(:user_answer3, @question3.question) %>
+  <audio src="<%= @question3.audioclip.url %>" preload="auto" controls></audio>
   <%= hidden_field_tag :correct_answer3, @question3.answer %>
   <%= hidden_field_tag(:octave3, @question3.octave) %>
   <%= text_field_tag(:user_answer3) %> correct answer:  <%= @question3.answer %>
