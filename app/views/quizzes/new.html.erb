@@ -27,7 +27,7 @@ LESSON TITLE: <%= @lesson.title %>
   <%= label_tag(:user_answer3, @question3.question) %>
   <%= hidden_field_tag :correct_answer3, @question3.answer %>
   <%= hidden_field_tag(:octave3, @question3.octave) %>
-  <%= text_field_tag(:user_answer3) %> correct answer:  <%= @question2.answer %>
+  <%= text_field_tag(:user_answer3) %> correct answer:  <%= @question3.answer %>
   <br>
   <%= submit_tag("Submit Answers") %>
 <% end %>
