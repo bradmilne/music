@@ -5,6 +5,7 @@ gem 'bootstrap-sass', '2.1'
 gem 'activeadmin'
 gem 'paperclip'
 gem 'taps'
+gem 'mediaelement_rails'
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
