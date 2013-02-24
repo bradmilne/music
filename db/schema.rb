@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130224141041) do
+ActiveRecord::Schema.define(:version => 20130224152720) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -83,5 +83,14 @@ ActiveRecord::Schema.define(:version => 20130224141041) do
   end
 
   add_index "quizzes", ["lesson_id"], :name => "index_quizzes_on_lesson_id"
+
+  create_table "responses", :force => true do |t|
+    t.string   "correct_answer"
+    t.string   "user_answer"
+    t.integer  "octave"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+    t.integer  "lesson_id"
+  end
 
 end

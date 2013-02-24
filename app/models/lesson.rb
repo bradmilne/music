@@ -3,7 +3,9 @@ class Lesson < ActiveRecord::Base
   
   has_many :questions
   has_many :quizzes
+  has_many :responses
   accepts_nested_attributes_for :quizzes
+  accepts_nested_attributes_for :responses
   
   belongs_to :path
 end
