@@ -6,6 +6,7 @@ gem 'activeadmin'
 gem 'paperclip'
 gem 'mediaelement_rails'
 gem 'thin'
+gem 'taps'
 
 group :development, :test do
   gem 'pg'
