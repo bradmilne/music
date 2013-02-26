@@ -6,11 +6,11 @@ gem 'activeadmin'
 gem 'paperclip'
 gem 'mediaelement_rails'
 gem 'thin'
-gem 'taps'
 
 group :development, :test do
   gem 'pg'
   gem 'rspec-rails', '2.11.0'
+  gem 'taps', :require => false # has an sqlite dependency, which heroku hates
 end
 
 # Gems used only for assets and not required
