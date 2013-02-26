@@ -11,7 +11,7 @@ group :development, :test do
   gem 'pg'
   gem 'rspec-rails', '2.11.0'
   gem 'taps', :require => false # has an sqlite dependency, which heroku hates
-  gem 'sqlite3', '1.3.7'
+  gem 'sqlite3'
 end
 
 # Gems used only for assets and not required
