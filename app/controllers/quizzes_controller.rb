@@ -50,8 +50,15 @@ class QuizzesController < ApplicationController
   end
   
   def show
-    @score
-    @question1_score
+  end
+  
+  def index
+    @lesson = Lesson.find(params[:lesson_id])
+    @correct_responses_c = Response.find(:all, :conditions => {:correct_answer => "C", :result => true})
+    @total_responses_c = Response.find(:all, :conditions => {:correct_answer => "C"})
+    @correct_responses_c = @correct_responses_c.length
+    @total_responses_c = @total_responses_c.length
+    @quizzes = @lesson.quizzes.all(:order => 'created_at DESC')
   end
   
 end

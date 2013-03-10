@@ -1,0 +1,16 @@
+<h1>Your results for this lesson are below:</h1>
+
+<br>
+<br>
+Results for C: <%= @correct_responses_c %> / <%= @total_responses_c %> (Most common mistake: TBD)
+<br>
+Results for E: <%= @correct_responses_c %> / <%= @total_responses_c %> (Most common mistake: TBD)
+<br>
+Results for G: <%= @correct_responses_c %> / <%= @total_responses_c %> (Most common mistake: TBD)
+<br>
+
+<h3>Quiz Results</h3>
+<% @quizzes.each do |quiz| %>
+	Lesson: <%= quiz.lesson_id %>  Score: <%= quiz.score %> Date: <%= localize(quiz.created_at, :format => :short) %><br>
+<% end %>
+<br>
